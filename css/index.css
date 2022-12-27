@@ -1,0 +1,29 @@
+.linha{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.dados, .resultado{
+    width: 50%;
+    height: auto;
+    margin: 0px;
+}
+.dados{
+    background-color: lightgray;
+}
+.acao{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+#gerPagina{
+    margin: 0 10px;
+}
+#markdown{
+    width: 80%;
+    align-items: center;
+}
+img{
+    max-width: 95%;
+    height: auto;
+}

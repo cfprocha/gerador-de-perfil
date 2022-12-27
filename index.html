@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Perfil para o Github</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="ico/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="linha">
+        <section class="dados">
+            <h1>Bem vindo ao gerador de página de perfil para o Github</h1>
+            <h2>Responda às perguntas abaixo e tenha o seu perfil gerado automaticamente</h2>
+            <fieldset>
+                <legend>Elementos Textuais</legend>
+                <label for="nome">Qual o seu nome?
+                    <input type="text" id="nome">
+                </label><br><br>
+                <label for="subtitulo">
+                    Caso deseje um subtítulo no seu perfil, informe ele aqui 
+                    <input type="text" id="subtitulo">
+                </label><br><br>
+                <label for="sobre">
+                    Fale um pouco a seu respeito 
+                    <input type="text" id="sobre">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Imagens</legend>
+                <label for="habilidades">
+                    Selecione as habilidades que deseja no seu perfil e clique em adicionar 
+                    <select name="habilidades" id="habilidades"></select>
+                    <input type="button" value="Adicionar" id="addHabilidade">
+                    <input type="button" value="Remover" id="remHabilidade">
+                </label><br><br>
+                <label for="imagem">
+                    Caso deseje adicionar uma imagem no topo de seu perfil, informe o URL dela aqui 
+                    <input type="text" id="imagem">
+                </label><br><br>
+                <label for="rsociais">
+                    Aqui você pode informar os seus ids de redes sociais.<br>
+                    Selecione a rede, então informe o seu e id e clique em adicionar. <br>
+                    <select name="redes" id="rsociais"></select> 
+                    <input type="text" id="id">
+                    <input type="button" id="addRsociais" value="Adicionar">
+                    <input type="button" value="Remover" id="remRsociais">
+                </label><br><br>
+            </fieldset>
+            <fieldset id="graficos">
+                <legend>Elementos de gráficos</legend>
+                <label for="perfil">Informe o perfil de onde deseja os elementos 
+                    <input type="text" name="perfil" id="perfil">
+                </label><br>
+                <div>
+                    <input type="checkbox" id="linguagens">
+                    <label for="linguagens"> Linguagens mais usadas</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="estatisticas">
+                    <label for="estatisticas"> Estatísticas da sua conta</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="atividade">
+                    <label for="atividade"> Atividade da conta (esse demora para aparecer, tenha calma)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="contribuicoes">
+                    <label for="contribuicoes"> Sequência de contribuições</label>
+                </div>
+            </fieldset>
+            <div class="acao">
+                <input type="button" value="Gerar página" id="gerPagina">   
+                <input type="button" value="Limpar página" id="limpaTudo">     
+            </div>
+        </section>
+        <section class="resultado">
+            <h2 id="resNome"></h2>
+            <h3 id="resSubtitulo"></h3>
+            <div id="resImagem"></div>
+            <p id="resSobre"></p>
+            <div id="resContato"></div>
+            <div id="resHabilidades"></div>
+            <div id="resEstatisticas"></div>
+        </section>
+    </div>
+    <div id="linha">
+        <section id="textoMarkdown">
+            <h4>Copie esse código Markdown para o seu perfil do Github
+                <input type="button" value="Copiar" id="copiaMd">
+            </h4>
+            <h5>Se desejar mudar algo no código, mude antes de clicar em copiar</h5>
+            <textarea id="markdown"></textarea>
+        </section>
+    </div>
+    <script src="js/index.js" />
+
+</body>
+</html>
