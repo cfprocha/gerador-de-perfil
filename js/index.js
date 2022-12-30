@@ -296,6 +296,7 @@ limpar.addEventListener("click", function(){
             control.value = "";
             mEstatisticas = "", hEstatisticas = "";
             mHabilidade = "", hHabilidade = "";
+            mContato = "", hContato = "";
         }
     });
     gPagina();
@@ -466,7 +467,7 @@ remContato.addEventListener("click", function(){
                 mContato = mContato.replace(`[${fContato}](https://www.reddit.com/user/${cId})`,"");
                 hContato = hContato.replace(`<a href="https://www.reddit.com/user/${cId}"><img alt="${oAlt}" src="${aUrl}"></a>`,"");
                 break;
-            case "Stack Overflow":
+            case "Stack_Overflow":
                 mContato = mContato.replace(`[${fContato}](https://stackoverflow.com/users/${cId})`,"");
                 hContato = hContato.replace(`<a href="https://stackoverflow.com/users/${cId}"><img alt="${oAlt}" src="${aUrl}"></a>`,"");
                 break;
