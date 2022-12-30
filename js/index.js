@@ -51,7 +51,6 @@ const habilidades = [
     [".NET","5C2D91",".net"],
     ["JavaScript","F7DF1E","javascript"],
     ["Node.js","43853D","node.js"],
-    ["Javascript","323330","javascript"],
     ["TypeScript","007ACC","typescript"],
     ["HTML5","E34F26","html5"],
     ["CSS3","1572B6","css3"],
