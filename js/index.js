@@ -1,4 +1,5 @@
-// Declara variáveis a serem usadas no código
+window.addEventListener("load", function(){
+    // Declara variáveis a serem usadas no código
 let mEstatisticas = "", hEstatisticas = "";
 let mHabilidade = "", hHabilidade = "", selecionado = "";
 let mContato = "", hContato = "";
@@ -535,3 +536,4 @@ cpMk.addEventListener("click", function(){
     const codigoMd = document.getElementById("markdown");
     navigator.clipboard.writeText(codigoMd.value);
 });
+})
