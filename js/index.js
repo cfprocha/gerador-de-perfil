@@ -393,7 +393,7 @@ addContato.addEventListener("click", function(){
                 mContato += `[${fContato}](https://www.reddit.com/user/${cId})`;
                 hContato += `<a href="https://www.reddit.com/user/${cId}"><img alt="${oAlt}" src="${aUrl}"></a>`;
                 break;
-            case "Stack Overflow":
+            case "Stack_Overflow":
                 mContato += `[${fContato}](https://stackoverflow.com/users/${cId})`;
                 hContato += `<a href="https://stackoverflow.com/users/${cId}"><img alt="${oAlt}" src="${aUrl}"></a>`;
                 break;
@@ -512,8 +512,10 @@ function gPagina(){
         mTexto += nome.value + " ![Abanando](https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png)!\n\n";
         resSubtitulo.innerHTML = subtitulo.value;
         mTexto += "### " + subtitulo.value + "\n\n";
-        resImagem.innerHTML = `<img src="${imagem.value}">`;
-        mTexto += "![Imagem](" + imagem.value + ")\n\n";
+            if(imagem.value !== ""){
+                resImagem.innerHTML = `<img src="${imagem.value}">`;
+                mTexto += "![Imagem](" + imagem.value + ")\n\n";        
+            }
         resSobre.innerHTML = sobre.value;
         mTexto += sobre.value + "\n\n";
         resContato.innerHTML = `<h3>Formas de Contato:</h3><p>${hContato}</p>`;
