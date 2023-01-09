@@ -497,7 +497,7 @@ gerar.addEventListener("click",function(){
 function gPagina(){
         // Lê conteúdo do formulário
         const resMarkdown = document.getElementById("markdown");
-        let mTexto = "## Olá, eu sou o ";
+        let mTexto = "";
         const nome = document.getElementById("nome");
         let resNome = document.getElementById("resNome");
         const subtitulo = document.getElementById("subtitulo");
@@ -508,14 +508,14 @@ function gPagina(){
         const resContato = document.getElementById("resContato");
     
         // Escreve conteúdos na página
+        if(imagem.value !== ""){
+            resImagem.innerHTML = `<img src="${imagem.value}">`;
+            mTexto += "![Imagem](" + imagem.value + ")\n\n";        
+        }
         resNome.innerHTML = `Olá, eu sou o ${nome.value} <g-emoji class="g-emoji" alias="wave" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png">👋</g-emoji>!`;
-        mTexto += nome.value + " ![Abanando](https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png)!\n\n";
+        mTexto += `## Olá, eu sou o ${nome.value} ![Abanando](https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png)!\n\n`;
         resSubtitulo.innerHTML = subtitulo.value;
         mTexto += "### " + subtitulo.value + "\n\n";
-            if(imagem.value !== ""){
-                resImagem.innerHTML = `<img src="${imagem.value}">`;
-                mTexto += "![Imagem](" + imagem.value + ")\n\n";        
-            }
         resSobre.innerHTML = sobre.value;
         mTexto += sobre.value + "\n\n";
         resContato.innerHTML = `<h3>Formas de Contato:</h3><p>${hContato}</p>`;
